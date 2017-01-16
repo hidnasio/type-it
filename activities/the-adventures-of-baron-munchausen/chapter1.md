@@ -1,6 +1,6 @@
 -------------
 order: 1
-chapter: Chapter 1
+section: Chapter 1
 brief: The Baron relates an account of his first travels -- The asonishing effects of a storm -- Arrives at Ceylon; combats and conquers two extraordinary opponents -- Returns to Holland.
 -------------
 

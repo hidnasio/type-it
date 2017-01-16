@@ -1,0 +1,5 @@
+<ul>
+  {{#each model as |activity|}}
+    <li>{{link-to activity.title 'activity' activity.slug}}</li>
+  {{/each}}
+</ul>

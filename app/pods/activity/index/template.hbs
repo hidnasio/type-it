@@ -1,0 +1,8 @@
+<ul>
+  {{#each model.children as |section|}}
+    <li>
+      {{section.section}}
+    </li>
+  {{/each}}
+</ul>
+{{link-to 'back' 'index'}}
