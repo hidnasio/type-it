@@ -1,13 +1,12 @@
 import Ember from 'ember';
 
-const { inject } = Ember;
+const { inject, Object: EmberObject } = Ember;
 
 export default Ember.Service.extend({
   ajax: inject.service(),
 
   fetch() {
     return this.get('ajax').request("/activities.json").then((data) => {
-      console.log(data);
       this.set('data', data);
     });
   },
@@ -17,16 +16,24 @@ export default Ember.Service.extend({
     let items = [];
 
     children.forEach((item) => {
-      items.push({
+      items.push(EmberObject.create({
         title: item.title,
         slug: item.slug
-      });
+      }));
     });
 
     return items;
   },
 
-  find(slug) {
-    return this.get('data.children').findBy('slug', slug);
+  find(parentSlug, childSlug) {
+    let parent = EmberObject.create(
+      this.get('data.children').findBy('slug', parentSlug)
+    );
+
+    if (!childSlug) {
+      return parent;
+    }
+
+    return EmberObject.create(parent.get('children').findBy('slug', childSlug));
   }
 });

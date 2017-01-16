@@ -9,7 +9,9 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('index', { path: '/' });
 
-  this.route('activity', { path: ':slug' }, function(){ });
+  this.route('activity', { path: ':activitySlug' }, function(){
+    this.route('section', { path: ':sectionSlug' });
+  });
 });
 
 export default Router;

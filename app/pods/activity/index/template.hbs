@@ -1,7 +1,7 @@
 <ul>
   {{#each model.children as |child index|}}
     <li>
-      <strong>{{increment index}} - {{child.slug}}</strong>
+      {{link-to (increment index) 'activity.section' child.slug}}
     </li>
   {{/each}}
 </ul>
