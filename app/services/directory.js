@@ -7,6 +7,7 @@ export default Ember.Service.extend({
 
   fetch() {
     return this.get('ajax').request("/activities.json").then((data) => {
+      console.log(data);
       this.set('data', data);
     });
   },

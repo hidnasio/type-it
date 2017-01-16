@@ -1,7 +1,7 @@
 <ul>
-  {{#each model.children as |section|}}
+  {{#each model.children as |child index|}}
     <li>
-      {{section.section}}
+      <strong>{{increment index}} - {{child.slug}}</strong>
     </li>
   {{/each}}
 </ul>

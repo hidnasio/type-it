@@ -1,6 +1,3 @@
-----------
-section: Verses
-----------
 ## 1.
 
 AWAKE! for Morning in the Bowl of Night
