@@ -1,4 +1,10 @@
 Section
-{{model.content}}
+{{markdown-to-html
+  omitExtraWLInCodeBlocks=false
+  ghCodeBlocks=false
+  markdown=model.content
+  tables=true
+  strikethrough=true
+  extensions='typeit'}}
 <br>
 {{link-to 'back' 'activity' activity.slug}}

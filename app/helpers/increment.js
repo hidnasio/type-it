@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export function increment([a, ...params]) {
+export function increment([a]) {
   return a + 1;
 }
 
